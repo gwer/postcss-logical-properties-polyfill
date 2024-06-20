@@ -1,8 +1,8 @@
 {
     "include": ["src", "tests"],
     "compilerOptions": {
-        "target": "ES2019",
-        "lib": ["ES2019", "ES2020.String"],
+        "target": "ESNext",
+        "lib": ["ESNext"],
         "module": "CommonJS",
         "moduleResolution": "Node",
         "declaration": false,

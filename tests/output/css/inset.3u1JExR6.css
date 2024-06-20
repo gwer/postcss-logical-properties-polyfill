@@ -1,0 +1,247 @@
+.startInline {
+    inset-inline-start: 1px;
+}
+
+html[dir="ltr"] .startInline {
+    left: 1px;
+}
+
+html[dir="rtl"] .startInline {
+    right: 1px;
+}
+
+.endInline {
+    inset-inline-end: 1px;
+}
+
+html[dir="ltr"] .endInline {
+    right: 1px;
+}
+
+html[dir="rtl"] .endInline {
+    left: 1px;
+}
+
+.shorthandInlineOne {
+    inset-inline: 10px;
+}
+
+html[dir="ltr"] .shorthandInlineOne {
+    left: 10px;
+    right: 10px;
+}
+
+html[dir="rtl"] .shorthandInlineOne {
+    right: 10px;
+    left: 10px;
+}
+
+.shorthandInlineTwo {
+    inset-inline: 10px 5px;
+}
+
+html[dir="ltr"] .shorthandInlineTwo {
+    left: 10px;
+    right: 5px;
+}
+
+html[dir="rtl"] .shorthandInlineTwo {
+    right: 10px;
+    left: 5px;
+}
+
+.startBlock {
+    inset-block-start: 1px;
+}
+
+html[dir="ltr"] .startBlock {
+    top: 1px;
+}
+
+html[dir="rtl"] .startBlock {
+    top: 1px;
+}
+
+.endBlock {
+    inset-block-end: 1px;
+}
+
+html[dir="ltr"] .endBlock {
+    bottom: 1px;
+}
+
+html[dir="rtl"] .endBlock {
+    bottom: 1px;
+}
+
+.shorthandBlockOne {
+    inset-block: 10px;
+}
+
+html[dir="ltr"] .shorthandBlockOne {
+    top: 10px;
+    bottom: 10px;
+}
+
+html[dir="rtl"] .shorthandBlockOne {
+    top: 10px;
+    bottom: 10px;
+}
+
+.shorthandBlockTwo {
+    inset-block: 10px 5px;
+}
+
+html[dir="ltr"] .shorthandBlockTwo {
+    top: 10px;
+    bottom: 5px;
+}
+
+html[dir="rtl"] .shorthandBlockTwo {
+    top: 10px;
+    bottom: 5px;
+}
+
+.nonLogicalShorthandOne {
+    inset: 1px;
+}
+
+html[dir="ltr"] .nonLogicalShorthandOne {
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    right: 1px;
+}
+
+html[dir="rtl"] .nonLogicalShorthandOne {
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    right: 1px;
+}
+
+.nonLogicalShorthandTwo {
+    inset: 1px 2px;
+}
+
+html[dir="ltr"] .nonLogicalShorthandTwo {
+    top: 1px;
+    left: 2px;
+    bottom: 1px;
+    right: 2px;
+}
+
+html[dir="rtl"] .nonLogicalShorthandTwo {
+    top: 1px;
+    left: 2px;
+    bottom: 1px;
+    right: 2px;
+}
+
+.nonLogicalShorthandThree {
+    inset: 1px 2px 3px;
+}
+
+html[dir="ltr"] .nonLogicalShorthandThree {
+    top: 1px;
+    left: 2px;
+    bottom: 3px;
+    right: 2px;
+}
+
+html[dir="rtl"] .nonLogicalShorthandThree {
+    top: 1px;
+    left: 2px;
+    bottom: 3px;
+    right: 2px;
+}
+
+.nonLogicalShorthandFour {
+    inset: 1px 2px 3px 4px;
+}
+
+html[dir="ltr"] .nonLogicalShorthandFour {
+    top: 1px;
+    left: 2px;
+    bottom: 3px;
+    right: 4px;
+}
+
+html[dir="rtl"] .nonLogicalShorthandFour {
+    top: 1px;
+    left: 2px;
+    bottom: 3px;
+    right: 4px;
+}
+
+.logicalShorthandOne {
+    inset: logical 1px;
+}
+
+html[dir="ltr"] .logicalShorthandOne {
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    right: 1px;
+}
+
+html[dir="rtl"] .logicalShorthandOne {
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+}
+
+.logicalShorthandTwo {
+    inset: logical 1px 2px;
+}
+
+html[dir="ltr"] .logicalShorthandTwo {
+    top: 1px;
+    left: 2px;
+    bottom: 1px;
+    right: 2px;
+}
+
+html[dir="rtl"] .logicalShorthandTwo {
+    top: 1px;
+    right: 2px;
+    bottom: 1px;
+    left: 2px;
+}
+
+.logicalShorthandThree {
+    inset: logical 1px 2px 3px;
+}
+
+html[dir="ltr"] .logicalShorthandThree {
+    top: 1px;
+    left: 2px;
+    bottom: 3px;
+    right: 2px;
+}
+
+html[dir="rtl"] .logicalShorthandThree {
+    top: 1px;
+    right: 2px;
+    bottom: 3px;
+    left: 2px;
+}
+
+.logicalShorthandFour {
+    inset: logical 1px 2px 3px 4px;
+}
+
+html[dir="ltr"] .logicalShorthandFour {
+    top: 1px;
+    left: 2px;
+    bottom: 3px;
+    right: 4px;
+}
+
+html[dir="rtl"] .logicalShorthandFour {
+    top: 1px;
+    right: 2px;
+    bottom: 3px;
+    left: 4px;
+}

@@ -6,16 +6,18 @@
     line-height: 30px;
 }
 
-.sources-header {
-    padding-top: 7px;
-}
-
 html[dir="ltr"] .sources-header {
-    padding-left: 10px;
-    margin-right: 5px;
+    left: 10px;
+    right: 20px;
 }
 
 html[dir="rtl"] .sources-header {
-    padding-right: 10px;
-    margin-left: 5px;
+    right: 10px;
+    left: 20px;
+}
+
+.sources-header {
+    padding-top: 7px;
+    padding-inline-start: 10px;
+    margin-inline-end: 5px;
 }

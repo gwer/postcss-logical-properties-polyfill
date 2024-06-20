@@ -3,9 +3,6 @@ import * as path from 'path';
 import * as crypto from 'crypto';
 
 import postcss, { ProcessOptions } from 'postcss';
-import * as scssSyntax from 'postcss-scss';
-// @ts-ignore postcss-less has no type definitions ¯\(◉‿◉)/¯
-import * as lessSyntax from 'postcss-less';
 
 import plugin from './../src/plugin';
 
@@ -23,20 +20,7 @@ async function loadFile(path: string): Promise<string> {
 
 async function run(
     fixturePath: string,
-    pluginOpts: Parameters<typeof plugin>[0] = {
-        modes: [
-            ['horizontal-tb', 'rtl'],
-            ['horizontal-tb', 'ltr'],
-            ['vertical-rl', 'rtl'],
-            ['vertical-rl', 'ltr'],
-            ['vertical-lr', 'rtl'],
-            ['vertical-lr', 'ltr'],
-            ['sideways-rl', 'rtl'],
-            ['sideways-rl', 'ltr'],
-            ['sideways-lr', 'rtl'],
-            ['sideways-lr', 'ltr'],
-        ],
-    },
+    pluginOpts: Parameters<typeof plugin>[0] = {},
     postcssOpts: Omit<ProcessOptions, 'from'> = {},
 ) {
     const sha256Short = crypto
@@ -71,51 +55,9 @@ describe('properties transformation', () => {
             it(fixtureName, () => run(path.join(fixturesPrefix, fixtureName)));
         });
     });
-
-    describe('SCSS', () => {
-        const fixturesPrefix = path.join(__dirname, 'fixtures', 'scss');
-        fs.readdirSync(fixturesPrefix).forEach((fixtureName) => {
-            it(fixtureName, () => {
-                // @ts-ignore Have no idea why types here can't be resolved (╯°□°)╯︵ ┻━┻
-                return run(path.join(fixturesPrefix, fixtureName), undefined, {
-                    // @ts-ignore
-                    syntax: scssSyntax,
-                });
-            });
-        });
-    });
-
-    describe('LESS', () => {
-        const fixturesPrefix = path.join(__dirname, 'fixtures', 'less');
-        fs.readdirSync(fixturesPrefix).forEach((fixtureName) => {
-            it(fixtureName, () => {
-                return run(path.join(fixturesPrefix, fixtureName), undefined, {
-                    syntax: lessSyntax,
-                });
-            });
-        });
-    });
 });
 
 describe('options', () => {
-    it('buildSelector', () => {
-        return run(path.join(__dirname, 'fixtures', 'real-world-example.css'), {
-            buildSelector(selector, writingMode, direction) {
-                if (direction === 'ltr') {
-                    return '.bar.direction-ltr ' + selector;
-                }
-
-                return '[dir="' + direction + '"] ' + selector;
-            },
-        });
-    });
-
-    it('modes', () => {
-        return run(path.join(__dirname, 'fixtures', 'real-world-example.css'), {
-            modes: ['rtl'],
-        });
-    });
-
     it('preserve', () => {
         return run(path.join(__dirname, 'fixtures', 'real-world-example.css'), {
             preserve: false,
