@@ -1,7 +1,5 @@
 # PostCSS Old Safari Logical Properties Polyfill
 
-Forked from [erickskrauch/postcss-logical-properties-polyfill](https://github.com/erickskrauch/postcss-logical-properties-polyfill).
-
 [PostCSS](https://github.com/postcss/postcss) plugin that polyfill logical properties that are not supported in Safari 12–14:
 - inset-*
   - inset-block-start
@@ -39,3 +37,11 @@ const pluginOptions = {
     preserve: true, // If set to false, polyfilled properties will be removed
 }
 ```
+
+## Known issues
+
+- May lead to infinite loop with `preserve: true`.
+- Unnecessary ltr/rtl duplication for `top`/`bottom` rules.
+
+---
+Based on [erickskrauch/postcss-logical-properties-polyfill](https://github.com/erickskrauch/postcss-logical-properties-polyfill).
